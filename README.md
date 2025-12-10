@@ -162,3 +162,4 @@ For questions or customization needs, refer to the documentation files or update
 *Where beauty meets wellness*
 
 # glossglow_beautyspa
+# glossglow_beautyspa

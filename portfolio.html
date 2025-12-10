@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Glow Beauty Salon & Spa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-serif { font-family: 'Cormorant Garamond', serif; }
+    </style>
+</head>
+<body class="bg-[#FDFCF8] text-stone-800 antialiased selection:bg-stone-200 selection:text-stone-900 relative">
+
+    <!-- Top Bar -->
+    <div class="bg-stone-900 text-stone-50 py-3 text-sm text-center tracking-wide">
+        <p class="font-light">Now accepting new clients · <span class="mx-2 opacity-50">|</span> Call (718) 555-0123 · <span class="mx-2 opacity-50">|</span> <a href="contact.html" class="underline underline-offset-4 decoration-stone-500 hover:decoration-white transition-all">Book online in minutes</a></p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-[#FDFCF8]/90 backdrop-blur-md border-b border-stone-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <button class="lg:hidden text-stone-600 mobile-menu-btn">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+
+            <div class="flex-1 lg:flex-none text-center lg:text-left">
+                <a href="index.html" class="flex flex-col items-center lg:items-start group">
+                    <span class="font-serif text-2xl tracking-widest uppercase text-stone-900 group-hover:opacity-70 transition-opacity">Glow</span>
+                    <span class="text-[0.65rem] tracking-[0.2em] text-stone-500 uppercase mt-0.5">Beauty Salon & Spa</span>
+                </a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide text-stone-600">
+                <a href="index.html" class="hover:text-stone-900 transition-colors">Home</a>
+                <a href="about.html" class="hover:text-stone-900 transition-colors">About</a>
+                <a href="services.html" class="hover:text-stone-900 transition-colors">Services</a>
+                <a href="portfolio.html" class="hover:text-stone-900 transition-colors">Portfolio</a>
+                <a href="contact.html" class="hover:text-stone-900 transition-colors">Contact</a>
+            </div>
+
+            <div class="hidden lg:block pl-8">
+                <a href="contact.html" class="bg-[#BCAAA4] text-white px-6 py-3 text-xs font-medium uppercase tracking-widest hover:bg-[#A18E87] transition-colors rounded-sm">
+                    Book Now
+                </a>
+            </div>
+        </div>
+
+        <div class="lg:hidden mobile-menu hidden border-t border-stone-100 bg-white">
+            <div class="px-6 py-4 space-y-4">
+                <a href="index.html" class="block text-stone-600 hover:text-stone-900">Home</a>
+                <a href="about.html" class="block text-stone-600 hover:text-stone-900">About</a>
+                <a href="services.html" class="block text-stone-600 hover:text-stone-900">Services</a>
+                <a href="portfolio.html" class="block text-stone-600 hover:text-stone-900">Portfolio</a>
+                <a href="contact.html" class="block text-stone-600 hover:text-stone-900">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="relative w-full h-[50vh] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/portfolio-hero.jpg" alt="Our Portfolio" class="w-full h-full object-cover object-center brightness-[0.85]" onerror="this.src='https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2126&auto=format&fit=crop'">
+        </div>
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 text-center">
+            <h1 class="text-5xl lg:text-7xl font-light tracking-tight text-white mb-4">Our Portfolio</h1>
+            <p class="text-xl text-stone-100 font-light max-w-2xl mx-auto">See the beautiful results from our services</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active px-6 py-2 border border-stone-300 rounded-sm text-stone-600 hover:bg-[#BCAAA4] hover:text-white hover:border-[#BCAAA4] transition-colors" data-filter="all">All</button>
+                <button class="filter-btn px-6 py-2 border border-stone-300 rounded-sm text-stone-600 hover:bg-[#BCAAA4] hover:text-white hover:border-[#BCAAA4] transition-colors" data-filter="facials">Facials</button>
+                <button class="filter-btn px-6 py-2 border border-stone-300 rounded-sm text-stone-600 hover:bg-[#BCAAA4] hover:text-white hover:border-[#BCAAA4] transition-colors" data-filter="threading">Threading</button>
+                <button class="filter-btn px-6 py-2 border border-stone-300 rounded-sm text-stone-600 hover:bg-[#BCAAA4] hover:text-white hover:border-[#BCAAA4] transition-colors" data-filter="hair">Hair</button>
+                <button class="filter-btn px-6 py-2 border border-stone-300 rounded-sm text-stone-600 hover:bg-[#BCAAA4] hover:text-white hover:border-[#BCAAA4] transition-colors" data-filter="spa">Spa</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Facials -->
+                <div class="gallery-item" data-category="facials">
+                    <div class="gallery-placeholder">
+                        <p>Facial Treatment Result</p>
+                        <p class="text-xs mt-2">Place: assets/images/portfolio-facial-1.jpg</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="facials">
+                    <div class="gallery-placeholder">
+                        <p>Before & After - Acne Treatment</p>
+                        <p class="text-xs mt-2">Place: assets/images/portfolio-facial-2.jpg</p>
+                    </div>
+                </div>
+
+                <!-- Threading -->
+                <div class="gallery-item" data-category="threading">
+                    <div class="gallery-placeholder">
+                        <p>Eyebrow Threading Result</p>
+                        <p class="text-xs mt-2">Place: assets/images/portfolio-threading-1.jpg</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="threading">
+                    <div class="gallery-placeholder">
+                        <p>Perfectly Shaped Brows</p>
+                        <p class="text-xs mt-2">Place: assets/images/portfolio-threading-2.jpg</p>
+                    </div>
+                </div>
+
+                <!-- Hair -->
+                <div class="gallery-item" data-category="hair">
+                    <div class="gallery-placeholder">
+                        <p>Hair Color Transformation</p>
+                        <p class="text-xs mt-2">Place: assets/images/portfolio-hair-1.jpg</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="hair">
+                    <div class="gallery-placeholder">
+                        <p>Stylish Haircut</p>
+                        <p class="text-xs mt-2">Place: assets/images/portfolio-hair-2.jpg</p>
+                    </div>
+                </div>
+
+                <!-- Spa -->
+                <div class="gallery-item" data-category="spa">
+                    <div class="gallery-placeholder">
+                        <p>Relaxing Spa Environment</p>
+                        <p class="text-xs mt-2">Place: assets/images/portfolio-spa-1.jpg</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="spa">
+                    <div class="gallery-placeholder">
+                        <p>Massage Therapy Session</p>
+                        <p class="text-xs mt-2">Place: assets/images/portfolio-spa-2.jpg</p>
+                    </div>
+                </div>
+
+                <!-- More Facials -->
+                <div class="gallery-item" data-category="facials">
+                    <div class="gallery-placeholder">
+                        <p>Anti-Aging Facial Result</p>
+                        <p class="text-xs mt-2">Place: assets/images/portfolio-facial-3.jpg</p>
+                    </div>
+                </div>
+
+                <!-- More Hair -->
+                <div class="gallery-item" data-category="hair">
+                    <div class="gallery-placeholder">
+                        <p>Hair Styling Service</p>
+                        <p class="text-xs mt-2">Place: assets/images/portfolio-hair-3.jpg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="font-serif text-4xl lg:text-5xl font-light tracking-tight text-stone-900 mb-12 text-center">Client Testimonials</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-white p-8 rounded-sm border border-stone-200">
+                    <div class="flex justify-center text-[#BCAAA4] gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-stone-700 font-light italic mb-6 leading-relaxed">"I've been coming to Glow for over a year now. The threading service is exceptional and the staff is always friendly and professional."</p>
+                    <p class="text-sm font-medium uppercase tracking-widest text-stone-500">Maria S.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-sm border border-stone-200">
+                    <div class="flex justify-center text-[#BCAAA4] gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-stone-700 font-light italic mb-6 leading-relaxed">"The facial treatment transformed my skin! I can't believe the difference. The esthetician was so knowledgeable and made me feel completely comfortable."</p>
+                    <p class="text-sm font-medium uppercase tracking-widest text-stone-500">Jennifer L.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-sm border border-stone-200">
+                    <div class="flex justify-center text-[#BCAAA4] gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-stone-700 font-light italic mb-6 leading-relaxed">"Best massage I've ever had! The atmosphere is so peaceful and the therapist really knew how to work out all my tension. I'll definitely be back!"</p>
+                    <p class="text-sm font-medium uppercase tracking-widest text-stone-500">Amanda K.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="font-serif text-4xl lg:text-5xl font-light tracking-tight text-stone-900 mb-6">Ready to Experience These Results?</h2>
+            <p class="text-lg text-stone-600 font-light mb-10">Book your appointment today and let us help you achieve your beauty goals</p>
+            <a href="contact.html" class="bg-[#BCAAA4] text-white px-8 py-4 text-sm font-medium uppercase tracking-widest hover:bg-[#A18E87] transition-colors rounded-sm inline-block">
+                Book Your Appointment
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-16 text-sm font-light tracking-wide border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <span class="font-serif text-2xl text-stone-100 block mb-4">Glow</span>
+                <p class="mb-4 leading-relaxed">Beauty Salon & Spa dedicated to helping you look and feel your absolute best.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="contact.html" class="hover:text-white transition-colors"><i data-lucide="mail" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-stone-100 font-medium uppercase tracking-widest text-xs mb-6">Contact</h4>
+                <p class="mb-2">21842 Hillside Ave<br>Queens Village, NY 11427</p>
+                <p class="mb-2 hover:text-white cursor-pointer">(718) 555-0123</p>
+                <a href="mailto:hello@glowbeautysalon.com" class="hover:text-white transition-colors">hello@glowbeautysalon.com</a>
+            </div>
+            <div>
+                <h4 class="text-stone-100 font-medium uppercase tracking-widest text-xs mb-6">Explore</h4>
+                <ul class="space-y-3">
+                    <li><a href="services.html" class="hover:text-white transition-colors">Our Services</a></li>
+                    <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition-colors">Book Appointment</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-stone-100 font-medium uppercase tracking-widest text-xs mb-6">Hours</h4>
+                <ul class="space-y-2">
+                    <li class="flex justify-between"><span>Mon - Fri</span> <span class="text-stone-200">9am - 7pm</span></li>
+                    <li class="flex justify-between"><span>Saturday</span> <span class="text-stone-200">10am - 5pm</span></li>
+                    <li class="flex justify-between"><span>Sunday</span> <span class="text-stone-200">11am - 4pm</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-stone-800 text-xs text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2024 Glow Beauty Salon & Spa. All rights reserved.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Widget -->
+    <button id="chat-toggle" class="chat-toggle-btn">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </button>
+
+    <div id="live-chat-widget" class="hide-scrollbar">
+        <div class="chat-header">
+            <div>
+                <h3 class="font-medium">Chat with Us</h3>
+                <p class="text-xs opacity-90">We're here to help</p>
+            </div>
+            <button id="chat-close" class="text-white hover:opacity-70">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+        <div id="chat-messages" class="chat-messages hide-scrollbar"></div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type your message...">
+            <button id="chat-send" class="chat-send-btn">
+                <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+    <script>
+        lucide.createIcons();
+        
+        // Gallery filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active state
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active', 'bg-[#BCAAA4]', 'text-white', 'border-[#BCAAA4]'));
+                this.classList.add('active', 'bg-[#BCAAA4]', 'text-white', 'border-[#BCAAA4]');
+                
+                // Filter gallery items
+                const filter = this.getAttribute('data-filter');
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
